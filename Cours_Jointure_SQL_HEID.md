@@ -6,7 +6,7 @@ ___
 ___
 
 
-Une jointure SQL est une méthode permettant d'extraire des données de deux ou plusieurs tables de base de données. Cet article présente un aperçu de base de ce à quoi ressembleront les données issues d'une jointure SQL particulière. Une façon populaire de comprendre les jointures SQL est de les visualiser à l'aide de diagrammes de Venn. Ainsi, chaque exemple comporte le diagramme de Venn correspondant, l'instruction `SELECT` appropriée et la table de résultat.
+Une jointure SQL est une méthode permettant d'extraire des données de deux ou plusieurs tables de base de données. Cet article présente un aperçu de base de ce à quoi ressembleront les données issues d'une jointure SQL particulière. Une façon populaire de comprendre les jointures SQL est de les visualiser à l'aide de **diagrammes de Venn**. Ainsi, chaque exemple comporte le diagramme de Venn correspondant, l'instruction `SELECT` appropriée et la table de résultat.
 
 Il existe quelques grands types de jointures SQL :
 
