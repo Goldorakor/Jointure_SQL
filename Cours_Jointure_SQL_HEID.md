@@ -146,7 +146,7 @@ Le tableau résultant sera le suivant :
 # Joints basés sur des opérateurs
 
 
-## Mise en œuvre de l'équi-joint
+### Mise en œuvre de l'équi-joint
 
 Cette jointure est réalisée en utilisant l'opérateur d'égalité (=) pour comparer les valeurs de la clé primaire d'une table et les valeurs de la clé étrangère d'une autre table.
 
@@ -158,7 +158,7 @@ INNER/OUTER JOIN TableB
 ```
 
 
-## Mise en œuvre de la jonction thêta (non équi)
+### Mise en œuvre de la jonction thêta (non équi)
 
 C'est la même chose que le JOIN equi, mais il autorise tous les autres opérateurs comme >, &lt, >=, etc.
 
@@ -170,7 +170,7 @@ INNER/OUTER JOIN TableB
 ```
 
 
-## Mise en œuvre de l'auto-jointure
+### Mise en œuvre de l'auto-jointure
 
 Ce type de JOIN est généralement utilisé dans le cas d'un type de relation unaire, où une table est combinée avec elle-même.
 
