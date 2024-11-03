@@ -79,14 +79,154 @@ Le tableau résultant sera le suivant :
 
 
 
+SELECT *
+FROM TableA
+FULL OUTER JOIN TableB
+  ON TableA.name = TableB.name;
+
+
+
+
+La table résultante sera la suivante :
+
+
+
+Un LEFT OUTER JOIN renvoie toutes les lignes de la table de gauche (TableA) avec les lignes correspondantes de la table de droite (TableB) ou null - s'il n'y a pas de correspondance dans la table de droite.
+
+Les résultats se trouvent dans tout le cercle de gauche :
+
+
+
+SELECT *
+FROM TableA
+LEFT OUTER JOIN TableB
+  ON tableA.name = tableB.name;
+
+
+
+Le tableau résultant sera le suivant :
+
+
+
+
+Un RIGHT OUTER JOIN renvoie toutes les lignes de la table de droite (TableB) avec les lignes correspondantes de la table de gauche (TableA) ou null - s'il n'y a pas de correspondance dans la table de gauche.
+
+Les résultats se trouvent dans tout le cercle de droite :
+
+
+
+
+SELECT *
+FROM tableA
+RIGHT OUTER JOIN tableB
+  ON tableA.name = tableB.name
+
+
+
+Le tableau résultant sera le suivant :
+
+
+  
+
+# Joints basés sur des opérateurs
+
+
+Mise en œuvre de l'équi-joint
+
+Cette jointure est réalisée en utilisant l'opérateur d'égalité (=) pour comparer les valeurs de la clé primaire d'une table et les valeurs de la clé étrangère d'une autre table.
+
+
+SELECT *
+FROM TableA
+INNER/OUTER JOIN TableB
+  ON TableA.PK =TableB.Fk;
+
+
+
+Mise en œuvre de la jonction thêta (non équi)
+
+C'est la même chose que le JOIN equi, mais il autorise tous les autres opérateurs comme >, &lt, >=, etc.
+
+
+SELECT *
+FROM TableA
+INNER/OUTER JOIN TableB
+  ON tableA.Pk <= tableB.Fk;
+
+
+
+Mise en œuvre de l'auto-jointure
+
+Ce type de JOIN est généralement utilisé dans le cas d'un type de relation unaire, où une table est combinée avec elle-même.
+
+
+
+SELECT *
+FROM TableA A1
+JOIN TableA A2
+  ON A1.Pk = A2.Fk;
+
+
+
+# JOINT NATUREL
+
+
+Une jointure NATURELLE est un type de jointure EQUI. Il n'est pas nécessaire d'utiliser une clause ON. Les colonnes portant le même nom dans les tables associées n'apparaissent qu'une seule fois.
+
+SELECT *
+FROM tableA
+NATURAL JOIN tableB
+
+En manipulant des mots-clés, nous pouvons exclure des données spécifiques.
+
+Une jointure OUTER EXCLUDING renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
 
 
 
 
 
+SELECT *
+FROM tableA
+FULL OUTER JOIN tableB
+  ON tableA.name = tableB.name
+WHERE tableA.name IS NULL
+  OR tableB.name IS NULL
+
+
+  
+Le tableau résultant sera le suivant :
 
 
 
+Un LEFT EXCLUDING JOIN renvoie tous les enregistrements de la TableA qui ne correspondent à aucun enregistrement de la TableB.
+
+
+
+
+SELECT *
+FROM tableA
+LEFT JOIN tableB
+  ON tableA.name = tableB.name
+WHERE tableB.name IS NULL
+
+
+
+Le tableau résultant sera le suivant :
+
+
+
+Un RIGHT EXCLUDING JOIN renvoie tous les enregistrements de la TableB qui ne correspondent à aucun enregistrement de la TableA.
+
+
+
+SELECT *
+FROM tableA
+RIGHT JOIN tableB
+  ON tableA.name = tableB.name
+WHERE tableA.name IS NULL
+
+
+Le tableau résultant sera le suivant :
 
 
 
