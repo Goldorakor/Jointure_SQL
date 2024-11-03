@@ -198,7 +198,10 @@ NATURAL JOIN tableB
 
 *En manipulant des mots-clés, nous pouvons exclure des données spécifiques.*
 
-Une **jointure OUTER EXCLUDING** renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
+  
+## jointure OUTER EXCLUDING JOIN 
+
+Un **OUTER EXCLUDING JOIN** renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
 
 
 ![Digramme de Venn - Outer excluding join](join_sql/sql-joins-venn-diagrams-outer-excluding-join.webp)
@@ -220,6 +223,8 @@ Le tableau résultant sera le suivant :
 
 ![Table finale - Outer excluding join](join_sql/07-sql-joins-outer-excluding-join-result.webp)
 
+## jointure LEFT EXCLUDING JOIN
+
 Un **LEFT EXCLUDING JOIN** renvoie tous les enregistrements de la TableA qui ne correspondent à aucun enregistrement de la TableB.
 
 ![Digramme de Venn - Left excluding join](join_sql/sql-joins-venn-diagrams-left-excluding-join.webp)
@@ -239,6 +244,7 @@ Le tableau résultant sera le suivant :
 
 ![Table finale - Left excluding join](join_sql/08-sql-joins-left-excluding-join-result.webp)
 
+## jointure RIGHT EXCLUDING JOIN
 
 Un **RIGHT EXCLUDING JOIN** renvoie tous les enregistrements de la TableB qui ne correspondent à aucun enregistrement de la TableA.
 
