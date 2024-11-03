@@ -36,7 +36,7 @@ Dans les sections suivantes, nous allons voir ce qu'il advient de ces données l
 
 # CROSS JOIN
 
-Une CROSS JOIN est un produit cartésien de TableA et TableB. Chaque ligne de la TableA est mise en correspondance avec chaque ligne de la TableB ; c'est pourquoi une CROSS JOIN n'a pas de sens dans la plupart des situations.
+Une **CROSS JOIN est un produit cartésien de TableA et TableB**. Chaque ligne de la TableA est mise en correspondance avec chaque ligne de la TableB ; c'est pourquoi une CROSS JOIN n'a pas de sens dans la plupart des situations.
 
 ![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
 
