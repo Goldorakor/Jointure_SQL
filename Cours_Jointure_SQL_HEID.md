@@ -141,7 +141,8 @@ RIGHT OUTER JOIN tableB
 Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join-result.webp)
-  
+
+___
 
 # Joints basés sur des opérateurs
 
@@ -183,9 +184,9 @@ JOIN TableA A2
 ```
 
 
-# JOINT NATUREL
-
 ___
+
+# JOINT NATUREL
 
 Une jointure NATURELLE est un type de jointure EQUI. Il n'est pas nécessaire d'utiliser une clause ON. Les colonnes portant le même nom dans les tables associées n'apparaissent qu'une seule fois.
 
