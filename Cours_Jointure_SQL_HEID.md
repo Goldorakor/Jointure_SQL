@@ -33,6 +33,7 @@ Pour les besoins de cet article, discutons des jointures à l'aide d'un exemple 
 
 Dans les sections suivantes, nous allons voir ce qu'il advient de ces données lorsque différents types de jointures sont mis en œuvre.
 
+___
 
 # CROSS JOIN
 
@@ -53,6 +54,7 @@ La TableA et la TableB contiennent 4 lignes. La table résultante aura 4 * 4 = 1
 
 ![Calcul de la densité de mots clés](join_sql/02-sql-joins-cross-join-result.webp)
 
+___
 
 # INNER JOIN
 
@@ -74,6 +76,7 @@ Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join.webp)
 
+___
   
 # JOINTS EXTERNES
 
@@ -181,6 +184,7 @@ JOIN TableA A2
 
 # JOINT NATUREL
 
+___
 
 Une jointure NATURELLE est un type de jointure EQUI. Il n'est pas nécessaire d'utiliser une clause ON. Les colonnes portant le même nom dans les tables associées n'apparaissent qu'une seule fois.
 
