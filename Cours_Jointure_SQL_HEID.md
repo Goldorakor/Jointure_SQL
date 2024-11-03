@@ -75,7 +75,9 @@ Le tableau résultant sera le suivant :
 ![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join.webp)
 
   
+# JOINTS EXTERNES
 
+**FULL OUTER JOIN** renvoie les lignes correspondantes et non correspondantes des deux tables (c'est une union des deux). S'il n'y a pas de correspondance, le côté manquant contiendra null.
 
 
 ```
@@ -85,16 +87,20 @@ FULL OUTER JOIN TableB
   ON TableA.name = TableB.name;
 ```
 
+![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join.webp)
+
 
 
 La table résultante sera la suivante :
 
+![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join-result.webp)
 
-
-Un LEFT OUTER JOIN renvoie toutes les lignes de la table de gauche (TableA) avec les lignes correspondantes de la table de droite (TableB) ou null - s'il n'y a pas de correspondance dans la table de droite.
+Un **LEFT OUTER JOIN** renvoie toutes les lignes de la table de gauche (TableA) avec les lignes correspondantes de la table de droite (TableB) ou null - s'il n'y a pas de correspondance dans la table de droite.
 
 Les résultats se trouvent dans tout le cercle de gauche :
 
+
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-left-outer-join.webp)
 
 ```
 SELECT *
@@ -103,16 +109,19 @@ LEFT OUTER JOIN TableB
   ON tableA.name = tableB.name;
 ```
 
+![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join.webp)
+
 
 Le tableau résultant sera le suivant :
 
+![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join-result.webp)
 
-
-
-Un RIGHT OUTER JOIN renvoie toutes les lignes de la table de droite (TableB) avec les lignes correspondantes de la table de gauche (TableA) ou null - s'il n'y a pas de correspondance dans la table de gauche.
+Un **RIGHT OUTER JOIN** renvoie toutes les lignes de la table de droite (TableB) avec les lignes correspondantes de la table de gauche (TableA) ou null - s'il n'y a pas de correspondance dans la table de gauche.
 
 Les résultats se trouvent dans tout le cercle de droite :
 
+
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-outer-join.webp)
 
 
 ```
@@ -122,16 +131,18 @@ RIGHT OUTER JOIN tableB
   ON tableA.name = tableB.name
 ```
 
+![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join.webp)
+
 
 Le tableau résultant sera le suivant :
 
-
+![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join-result.webp)
   
 
 # Joints basés sur des opérateurs
 
 
-Mise en œuvre de l'équi-joint
+## Mise en œuvre de l'équi-joint
 
 Cette jointure est réalisée en utilisant l'opérateur d'égalité (=) pour comparer les valeurs de la clé primaire d'une table et les valeurs de la clé étrangère d'une autre table.
 
@@ -143,7 +154,7 @@ INNER/OUTER JOIN TableB
 ```
 
 
-Mise en œuvre de la jonction thêta (non équi)
+## Mise en œuvre de la jonction thêta (non équi)
 
 C'est la même chose que le JOIN equi, mais il autorise tous les autres opérateurs comme >, &lt, >=, etc.
 
@@ -155,7 +166,7 @@ INNER/OUTER JOIN TableB
 ```
 
 
-Mise en œuvre de l'auto-jointure
+## Mise en œuvre de l'auto-jointure
 
 Ce type de JOIN est généralement utilisé dans le cas d'un type de relation unaire, où une table est combinée avec elle-même.
 
@@ -179,11 +190,12 @@ FROM tableA
 NATURAL JOIN tableB
 ```
 
-En manipulant des mots-clés, nous pouvons exclure des données spécifiques.
+*En manipulant des mots-clés, nous pouvons exclure des données spécifiques.*
 
-Une jointure OUTER EXCLUDING renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
+Une **jointure OUTER EXCLUDING** renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
 
 
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-outer-excluding-join.webp)
 
 
 ```
@@ -202,7 +214,7 @@ Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/07-sql-joins-outer-excluding-join-result.webp)
 
-Un LEFT EXCLUDING JOIN renvoie tous les enregistrements de la TableA qui ne correspondent à aucun enregistrement de la TableB.
+Un **LEFT EXCLUDING JOIN** renvoie tous les enregistrements de la TableA qui ne correspondent à aucun enregistrement de la TableB.
 
 ![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-left-excluding-join.webp)
 
@@ -222,7 +234,7 @@ Le tableau résultant sera le suivant :
 ![Calcul de la densité de mots clés](join_sql/08-sql-joins-left-excluding-join-result.webp)
 
 
-Un RIGHT EXCLUDING JOIN renvoie tous les enregistrements de la TableB qui ne correspondent à aucun enregistrement de la TableA.
+Un **RIGHT EXCLUDING JOIN** renvoie tous les enregistrements de la TableB qui ne correspondent à aucun enregistrement de la TableA.
 
 ![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-excluding-join.webp)
 
@@ -248,23 +260,22 @@ Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-full-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join-result.webp)
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-left-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join-result.webp)
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join.webp)
 
-![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join-result.webp)
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-outer-excluding-join.webp)
+
+
+
+
+
+
+
+
 
 
 
