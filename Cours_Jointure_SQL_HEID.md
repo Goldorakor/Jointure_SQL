@@ -274,6 +274,10 @@ ___
 
 ![Récapitulatif d'un autre site](join_sql/Visual_SQL_JOINS_orig.jpg)
 
+___
+
+**https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins**
+
 
 
 
