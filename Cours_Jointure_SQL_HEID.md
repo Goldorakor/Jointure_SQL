@@ -22,11 +22,59 @@ ___
 ## 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 logiciels permettant ce contexte.
 
 
-![Calcul de la densité de mots clés](images/join_sql/types-of-sql-joins-1.webp)
+![Calcul de la densité de mots clés](join_sql/types-of-sql-joins-1.webp)
 
-![Calcul de la densité de mots clés](images/join_sql/01-sql-joins-initial-tables.webp)
+![Calcul de la densité de mots clés](join_sql/01-sql-joins-initial-tables.webp)
 
-![Calcul de la densité de mots clés](images/join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
+
+![Calcul de la densité de mots clés](02-sql-joins-cross-join.webp)
+
+![Calcul de la densité de mots clés](02-sql-joins-cross-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-inner-join.webp)
+
+![Calcul de la densité de mots clés](03-sql-joins-inner-join.webp)
+
+![Calcul de la densité de mots clés](03-sql-joins-inner-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-full-outer-join.webp)
+
+![Calcul de la densité de mots clés](04-sql-joins-full-outer-join.webp)
+
+![Calcul de la densité de mots clés](04-sql-joins-full-outer-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-left-outer-join.webp)
+
+![Calcul de la densité de mots clés](05-sql-joins-left-outer-join.webp)
+
+![Calcul de la densité de mots clés](05-sql-joins-left-outer-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-right-outer-join.webp)
+
+![Calcul de la densité de mots clés](06-sql-joins-right-outer-join.webp)
+
+![Calcul de la densité de mots clés](06-sql-joins-right-outer-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-outer-excluding-join.webp)
+
+![Calcul de la densité de mots clés](07-sql-joins-outer-excluding-join.webp)
+
+![Calcul de la densité de mots clés](07-sql-joins-outer-excluding-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-left-excluding-join.webp)
+
+![Calcul de la densité de mots clés](08-sql-joins-left-excluding-join.webp)
+
+![Calcul de la densité de mots clés](08-sql-joins-left-excluding-join-result.webp)
+
+![Calcul de la densité de mots clés](sql-joins-venn-diagrams-right-excluding-join.webp)
+
+![Calcul de la densité de mots clés](09-sql-joins-right-excluding-join.webp)
+
+![Calcul de la densité de mots clés](09-sql-joins-right-excluding-join-result.webp)
+
+
 
 
 
