@@ -121,30 +121,12 @@ Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/08-sql-joins-left-excluding-join.webp)
 
-![Calcul de la densité de mots clés](08-sql-joins-left-excluding-join-result.webp)
+![Calcul de la densité de mots clés](join_sql/08-sql-joins-left-excluding-join-result.webp)
 
-![Calcul de la densité de mots clés](sql-joins-venn-diagrams-right-excluding-join.webp)
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-excluding-join.webp)
 
-![Calcul de la densité de mots clés](09-sql-joins-right-excluding-join.webp)
+![Calcul de la densité de mots clés](join_sql/09-sql-joins-right-excluding-join.webp)
 
-![Calcul de la densité de mots clés](09-sql-joins-right-excluding-join-result.webp)
-
-
+![Calcul de la densité de mots clés](join_sql/09-sql-joins-right-excluding-join-result.webp)
 
 
-
-
-
-```
-
-
-
-___
-
-## 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ? (déjà répondu à la question 23)
-
-```
-
-
-
-___
