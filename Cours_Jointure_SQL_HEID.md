@@ -188,7 +188,7 @@ ___
 
 # JOINT NATUREL
 
-Une jointure NATURELLE est un type de jointure EQUI. Il n'est pas nécessaire d'utiliser une clause ON. Les colonnes portant le même nom dans les tables associées n'apparaissent qu'une seule fois.
+Une jointure NATURELLE est un type de jointure EQUI. Il n'est **pas nécessaire d'utiliser une clause `ON`**. Les colonnes portant le même nom dans les tables associées n'apparaissent qu'une seule fois.
 
 ```
 SELECT *
