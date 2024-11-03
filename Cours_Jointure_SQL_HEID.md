@@ -264,9 +264,9 @@ Le tableau résultant sera le suivant :
 
 
 
+## Synthèse pris d'un autre site :
 
-
-
+![Récapitulatif d'un autre site](join_sql/Visual_SQL_JOINS_orig.jpg)
 
 
 
