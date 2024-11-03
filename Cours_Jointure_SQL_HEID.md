@@ -16,7 +16,7 @@ Il existe quelques grands types de jointures SQL :
 - **JOINT CROISÉ**
 
 
-Nous distinguons l'implémentation de ces jointures en fonction des opérateurs de jointure :
+Nous distinguons l'implémentation de ces jointures en fonction des **opérateurs de jointure** :
 
 - **equi**
 - **thêta**
