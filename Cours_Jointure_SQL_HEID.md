@@ -262,8 +262,6 @@ Le tableau résultant sera le suivant :
 
 
 
-![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join-result.webp)
-
 
 
 
