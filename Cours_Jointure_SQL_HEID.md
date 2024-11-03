@@ -22,13 +22,13 @@ Nous distinguons l'implémentation de ces jointures en fonction des **opérateur
 - **thêta**
 
 
-![Calcul de la densité de mots clés](join_sql/types-of-sql-joins-1.webp)
+![Schémas des diverses jointures](join_sql/types-of-sql-joins-1.webp)
 
 
 Pour les besoins de cet article, discutons des jointures à l'aide d'un exemple simple. Supposons que nous ayons deux tables de base, TableA et TableB, qui contiennent des données d'exemple. Comme nous allons joindre les tables sur la colonne `name`, nous distinguons les lignes de même nom en les mettant en surbrillance en rouge.
 
 
-![Calcul de la densité de mots clés](join_sql/01-sql-joins-initial-tables.webp)
+![Introduction des deux tables](join_sql/01-sql-joins-initial-tables.webp)
 
 
 Dans les sections suivantes, nous allons voir ce qu'il advient de ces données lorsque différents types de jointures sont mis en œuvre.
@@ -39,7 +39,7 @@ ___
 
 Une **CROSS JOIN est un produit cartésien de TableA et TableB**. Chaque ligne de la TableA est mise en correspondance avec chaque ligne de la TableB ; c'est pourquoi une CROSS JOIN n'a pas de sens dans la plupart des situations.
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
+![Digramme de Venn - Cross join](join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
 
 
 ```
@@ -48,11 +48,11 @@ FROM tableA
 CROSS JOIN tableB;
 ```
 
-![Calcul de la densité de mots clés](join_sql/02-sql-joins-cross-join.webp)
+![Interaction des deux tables - Cross join](join_sql/02-sql-joins-cross-join.webp)
 
 La TableA et la TableB contiennent 4 lignes. La table résultante aura 4 * 4 = 16 lignes et se présentera comme suit :
 
-![Calcul de la densité de mots clés](join_sql/02-sql-joins-cross-join-result.webp)
+![Table finale - Cross join](join_sql/02-sql-joins-cross-join-result.webp)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 Un INNER JOIN fusionne UNIQUEMENT les lignes correspondantes dans les DEUX tableaux. Un JOIN sans aucun autre mot-clé de JOIN (comme INNER, OUTER, LEFT, etc.) est un INNER JOIN. Les résultats sont trouvés dans la zone de chevauchement.
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-inner-join.webp)
+![Digramme de Venn - Inner join](join_sql/sql-joins-venn-diagrams-inner-join.webp)
 
 
 ```
@@ -70,11 +70,11 @@ INNER JOIN tableB
   ON tableA.name = tableB.name
 ```
 
-![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join.webp) 
+![Interaction des deux tables - Inner join](join_sql/03-sql-joins-inner-join.webp) 
 
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join-result.webp)
+![Table finale - Inner join](join_sql/03-sql-joins-inner-join-result.webp)
 
 ___
   
@@ -82,7 +82,7 @@ ___
 
 **FULL OUTER JOIN** renvoie les lignes correspondantes et non correspondantes des deux tables (c'est une union des deux). S'il n'y a pas de correspondance, le côté manquant contiendra null.
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-full-outer-join.webp)
+![Digramme de Venn - Full outer join](join_sql/sql-joins-venn-diagrams-full-outer-join.webp)
 
 ```
 SELECT *
@@ -91,20 +91,20 @@ FULL OUTER JOIN TableB
   ON TableA.name = TableB.name;
 ```
 
-![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join.webp)
+![Interaction des deux tables - Full outer join](join_sql/04-sql-joins-full-outer-join.webp)
 
 
 
 La table résultante sera la suivante :
 
-![Calcul de la densité de mots clés](join_sql/04-sql-joins-full-outer-join-result.webp)
+![Table finale - Full outer join](join_sql/04-sql-joins-full-outer-join-result.webp)
 
 Un **LEFT OUTER JOIN** renvoie toutes les lignes de la table de gauche (TableA) avec les lignes correspondantes de la table de droite (TableB) ou null - s'il n'y a pas de correspondance dans la table de droite.
 
 Les résultats se trouvent dans tout le cercle de gauche :
 
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-left-outer-join.webp)
+![Digramme de Venn - Left outer join](join_sql/sql-joins-venn-diagrams-left-outer-join.webp)
 
 ```
 SELECT *
@@ -113,19 +113,19 @@ LEFT OUTER JOIN TableB
   ON tableA.name = tableB.name;
 ```
 
-![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join.webp)
+![Interaction des deux tables - Left outer join](join_sql/05-sql-joins-left-outer-join.webp)
 
 
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/05-sql-joins-left-outer-join-result.webp)
+![Table finale - Left outer join](join_sql/05-sql-joins-left-outer-join-result.webp)
 
 Un **RIGHT OUTER JOIN** renvoie toutes les lignes de la table de droite (TableB) avec les lignes correspondantes de la table de gauche (TableA) ou null - s'il n'y a pas de correspondance dans la table de gauche.
 
 Les résultats se trouvent dans tout le cercle de droite :
 
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-outer-join.webp)
+![Digramme de Venn - Right outer join](join_sql/sql-joins-venn-diagrams-right-outer-join.webp)
 
 
 ```
@@ -135,12 +135,12 @@ RIGHT OUTER JOIN tableB
   ON tableA.name = tableB.name
 ```
 
-![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join.webp)
+![Interaction des deux tables - Right outer join](join_sql/06-sql-joins-right-outer-join.webp)
 
 
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/06-sql-joins-right-outer-join-result.webp)
+![Table finale - Right outer join](join_sql/06-sql-joins-right-outer-join-result.webp)
 
 ___
 
@@ -201,7 +201,7 @@ NATURAL JOIN tableB
 Une **jointure OUTER EXCLUDING** renvoie tous les enregistrements de la table A et tous les enregistrements de la table B qui ne correspondent pas.
 
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-outer-excluding-join.webp)
+![Digramme de Venn - Outer excluding join](join_sql/sql-joins-venn-diagrams-outer-excluding-join.webp)
 
 
 ```
@@ -213,16 +213,16 @@ WHERE tableA.name IS NULL
   OR tableB.name IS NULL
 ```
 
-![Calcul de la densité de mots clés](join_sql/07-sql-joins-outer-excluding-join.webp)
+![Interaction des deux tables - Outer excluding join](join_sql/07-sql-joins-outer-excluding-join.webp)
 
   
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/07-sql-joins-outer-excluding-join-result.webp)
+![Table finale - Outer excluding join](join_sql/07-sql-joins-outer-excluding-join-result.webp)
 
 Un **LEFT EXCLUDING JOIN** renvoie tous les enregistrements de la TableA qui ne correspondent à aucun enregistrement de la TableB.
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-left-excluding-join.webp)
+![Digramme de Venn - Left excluding join](join_sql/sql-joins-venn-diagrams-left-excluding-join.webp)
 
 ```
 SELECT *
@@ -232,17 +232,17 @@ LEFT JOIN tableB
 WHERE tableB.name IS NULL
 ```
 
-![Calcul de la densité de mots clés](join_sql/08-sql-joins-left-excluding-join.webp)
+![Interaction des deux tables - Left excluding join](join_sql/08-sql-joins-left-excluding-join.webp)
 
 
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/08-sql-joins-left-excluding-join-result.webp)
+![Table finale - Left excluding join](join_sql/08-sql-joins-left-excluding-join-result.webp)
 
 
 Un **RIGHT EXCLUDING JOIN** renvoie tous les enregistrements de la TableB qui ne correspondent à aucun enregistrement de la TableA.
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-right-excluding-join.webp)
+![Digramme de Venn - Right excluding join](join_sql/sql-joins-venn-diagrams-right-excluding-join.webp)
 
 
 ```
@@ -253,18 +253,18 @@ RIGHT JOIN tableB
 WHERE tableA.name IS NULL
 ```
 
-![Calcul de la densité de mots clés](join_sql/09-sql-joins-right-excluding-join.webp)
+![Interaction des deux tables - Right excluding join](join_sql/09-sql-joins-right-excluding-join.webp)
 
 
 Le tableau résultant sera le suivant :
 
-![Calcul de la densité de mots clés](join_sql/09-sql-joins-right-excluding-join-result.webp)
+![Table finale - Right excluding join](join_sql/09-sql-joins-right-excluding-join-result.webp)
 
 
+___
+___
 
-
-
-## Synthèse pris d'un autre site :
+# Synthèse pris d'un autre site :
 
 ![Récapitulatif d'un autre site](join_sql/Visual_SQL_JOINS_orig.jpg)
 
