@@ -47,7 +47,7 @@ FROM tableA
 CROSS JOIN tableB;
 ```
 
-![Calcul de la densité de mots clés](02-sql-joins-cross-join.webp)
+![Calcul de la densité de mots clés](join_sql/02-sql-joins-cross-join.webp)
 
 La TableA et la TableB contiennent 4 lignes. La table résultante aura 4 * 4 = 16 lignes et se présentera comme suit :
 
