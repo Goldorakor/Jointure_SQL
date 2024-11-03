@@ -82,6 +82,7 @@ ___
 
 **FULL OUTER JOIN** renvoie les lignes correspondantes et non correspondantes des deux tables (c'est une union des deux). S'il n'y a pas de correspondance, le côté manquant contiendra null.
 
+![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-full-outer-join.webp)
 
 ```
 SELECT *
@@ -262,7 +263,7 @@ Le tableau résultant sera le suivant :
 
 ![Calcul de la densité de mots clés](join_sql/03-sql-joins-inner-join-result.webp)
 
-![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-full-outer-join.webp)
+
 
 
 
