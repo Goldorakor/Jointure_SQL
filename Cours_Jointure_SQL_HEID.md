@@ -1,40 +1,95 @@
-# GLOSSAIRE
+# Jointure_SQL : Explication des types de jointures SQL 
 
-- [Général](#général) [questions 1 à 17]
-- [Front-end](#front-end) [questions 18 à 34]
-- [UX / UI](#ux-ui) [questions 35 à 42]
-- [Programmation orientée objet](#programmation-orientée-objet-poo) [questions 43 à 59]
-- [Architecture](#architecture) [questions 60 à 66]
-- [Modélisation / Base de données](#modélisation---base-de-données) [questions 67 à 83]
-- [Symfony](#symfony) [questions 84 à 93]
-- [Sécurité](#sécurité) [questions 94 à 103]
-- [RGPD](#rgpd) [questions 104 à 113]
-- [SEO](#seo) [questions 114 à 126]
-- [Gestion de projets / DevOps](#gestion-de-projets---devops) [questions 127 à 142]
-- [English](#english)
+### *Quelle est la différence entre INNER JOIN, LEFT JOIN, RIGHT JOIN et FULL JOIN en SQL ? Quand devez-vous utiliser chacune d'entre elles ? Nous avons vos réponses ici.*
 
 ___
 ___
 
-# Général
-  
-  
-## 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 logiciels permettant ce contexte.
+
+Une jointure SQL est une méthode permettant d'extraire des données de deux ou plusieurs tables de base de données. Cet article présente un aperçu de base de ce à quoi ressembleront les données issues d'une jointure SQL particulière. Une façon populaire de comprendre les jointures SQL est de les visualiser à l'aide de diagrammes de Venn. Ainsi, chaque exemple comporte le diagramme de Venn correspondant, l'instruction `SELECT` appropriée et la table de résultat.
+
+Il existe quelques grands types de jointures SQL :
+
+- **INNER JOIN**
+- **JOINTURE EXTERNE** [GAUCHE | DROITE | COMPLÈTE]
+- **NATURAL JOIN**
+- **JOINT CROISÉ**
+
+
+Nous distinguons l'implémentation de ces jointures en fonction des opérateurs de jointure :
+
+- **equi**
+- **thêta**
 
 
 ![Calcul de la densité de mots clés](join_sql/types-of-sql-joins-1.webp)
 
+
+Pour les besoins de cet article, discutons des jointures à l'aide d'un exemple simple. Supposons que nous ayons deux tables de base, TableA et TableB, qui contiennent des données d'exemple. Comme nous allons joindre les tables sur la colonne `name`, nous distinguons les lignes de même nom en les mettant en surbrillance en rouge.
+
+
 ![Calcul de la densité de mots clés](join_sql/01-sql-joins-initial-tables.webp)
+
+
+Dans les sections suivantes, nous allons voir ce qu'il advient de ces données lorsque différents types de jointures sont mis en œuvre.
+
+
+# CROSS JOIN
+
+Une CROSS JOIN est un produit cartésien de TableA et TableB. Chaque ligne de la TableA est mise en correspondance avec chaque ligne de la TableB ; c'est pourquoi une CROSS JOIN n'a pas de sens dans la plupart des situations.
 
 ![Calcul de la densité de mots clés](join_sql/sql-joins-venn-diagrams-cross-join-1.webp)
 
+
+```
+SELECT *
+FROM tableA
+CROSS JOIN tableB;
+```
+
 ![Calcul de la densité de mots clés](02-sql-joins-cross-join.webp)
+
+La TableA et la TableB contiennent 4 lignes. La table résultante aura 4 * 4 = 16 lignes et se présentera comme suit :
 
 ![Calcul de la densité de mots clés](02-sql-joins-cross-join-result.webp)
 
+
+# INNER JOIN
+
+Un INNER JOIN fusionne UNIQUEMENT les lignes correspondantes dans les DEUX tableaux. Un JOIN sans aucun autre mot-clé de JOIN (comme INNER, OUTER, LEFT, etc.) est un INNER JOIN. Les résultats sont trouvés dans la zone de chevauchement.
+
 ![Calcul de la densité de mots clés](sql-joins-venn-diagrams-inner-join.webp)
 
+
+```
+SELECT *
+FROM tableA
+INNER JOIN tableB
+  ON tableA.name = tableB.name
+```
+
+![Calcul de la densité de mots clés](03-sql-joins-inner-join.webp) 
+
+Le tableau résultant sera le suivant :
+
 ![Calcul de la densité de mots clés](03-sql-joins-inner-join.webp)
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ![Calcul de la densité de mots clés](03-sql-joins-inner-join-result.webp)
 
